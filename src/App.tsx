@@ -16,6 +16,7 @@ import Documentation from "./pages/Documentation";
 import Careers from "./pages/Careers";
 import AgentDashboard from "./pages/AgentDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
+import ApplicationForm from "./pages/ApplicationForm";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/agent-dashboard" element={<AgentDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/application-form" element={<ApplicationForm />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

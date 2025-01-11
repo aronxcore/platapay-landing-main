@@ -7,9 +7,14 @@ import { AdminPaymentModes } from "@/components/AdminPaymentModes";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Wallet } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Agents = () => {
   const [isAdmin, setIsAdmin] = useState(false); // TODO: Implement proper admin authentication
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate("/application-form");
+  };
 
   return (
     <div className="min-h-screen bg-[#5a2c7f]">
@@ -25,11 +30,12 @@ const Agents = () => {
               <p className="text-xl text-[#f5f5f5] mb-8 animate-fade-in">
                 Be part of our growing community of financial service providers
               </p>
-              <Button 
+                <Button 
                 className="font-bold bg-[#7fba59] border-2 border-[transparent] hover:bg-[#517f3a] text-[#ffffff] text-lg px-8 py-6"
-              >
+                onClick={handleButtonClick}
+                >
                 Apply Now <ArrowRight className="ml-2" />
-              </Button>
+                </Button>
             </div>
           </div>
         </section>
